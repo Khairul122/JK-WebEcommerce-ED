@@ -4,8 +4,6 @@
     </h2>
     <div class="grid grid-cols-12 gap-6 mt-5">
         <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
-
-
             <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
                 <div class="w-56 relative text-slate-500">
                     <input type="text" class="form-control w-56 box pr-10" placeholder="Search...">
@@ -31,7 +29,7 @@
                     </div>
                     <div class="flex justify-center lg:justify-end items-center p-5 border-t border-slate-200/60 dark:border-darkmode-400">
                         <a class="flex items-center btn btn-sm btn-primary mr-3" href="javascript:;" data-tw-toggle="modal" data-tw-target="#delete-confirmation-modal"> <i data-lucide="shopping-cart" class="w-4 h-4 mr-1"></i> Add to Cart </a>
-                      
+
                     </div>
                 </div>
             </div>
@@ -77,20 +75,20 @@
         <div class="modal-content">
             <div class="modal-body p-0">
                 <div class="p-5 text-center">
-                    <i data-lucide="alert-circle" class="w-16 h-16 text-primary mx-auto mt-3"></i> 
+                    <i data-lucide="alert-circle" class="w-16 h-16 text-primary mx-auto mt-3"></i>
                     <div class="text-3xl mt-5">Please Wait</div>
                     <div class="text-slate-500 mt-2">
-                        Anda harus melakukan login terlebih dahulu 
+                        Anda harus melakukan login terlebih dahulu
                         <br>
                         Untuk melanjutkan proses checkout item.
                     </div>
                 </div>
                 <div class="px-5 pb-8 text-center">
                     <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-24 mr-1">Cancel</button>
-                    <a href="<?= site_url('welcome')?>" class="btn btn-primary w-24">Login</a>
+                    <a href="<?= site_url('welcome') ?>" class="btn btn-primary w-24">Login</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-                    <!-- END: Delete Confirmation Modal -->
+<!-- END: Delete Confirmation Modal -->
