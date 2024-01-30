@@ -4,7 +4,7 @@
             Transaction Details
         </h2>
         <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
-            <a href="<?= site_url('admin/invoice/pdf/'.$invoice->order_id) ?>" class="btn btn-primary shadow-md mr-2">Print</a>
+            <!-- <a href="<?= site_url('admin/invoice/pdf/'.$invoice->order_id) ?>" class="btn btn-primary shadow-md mr-2">Print</a> -->
             <a href="<?= site_url('admin/invoice') ?>" class="btn btn-danger shadow-md mr-2"> Invoice List</a>
         </div>
     </div>

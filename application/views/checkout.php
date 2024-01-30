@@ -1,9 +1,17 @@
+<?php
+// echo "Data pada session:<br>";
+// foreach ($_SESSION as $key => $value) {
+//     echo "$key: $value<br>";
+// }
+?>
+
 <div class="content">
     <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
         <h2 class="text-lg font-medium mr-auto">
             Checkout Form
         </h2>
     </div>
+
     <div class=" pos intro-y grid grid-cols-12 gap-5 mt-5">
         <!-- BEGIN: Post Content -->
         <?php $grand_total = 0;
@@ -74,6 +82,12 @@
                                         <label for="post-form-7" class="form-label">Delivery Service <small class="text-danger">*</small></label>
                                         <select name="ekspedisi" id="ekspedisi" class="form-control"></select>
                                     </div>
+
+                                    <div class="mb-5">
+                                        <label for="post-form-7" class="form-label">Total <small class="text-danger">*</small></label>
+                                        <input type="text" class="form-control" id="total" name="total" value="<?= number_format($this->cart->total(), 0, ',', '.') ?>" readonly>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="flex mt-5">

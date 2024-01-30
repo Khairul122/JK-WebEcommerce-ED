@@ -9,6 +9,7 @@ class Model_invoice extends CI_Model
 		$order_id = $this->input->post('order_id');
 		$id_user = $this->input->post('id_user');
 		$name = $this->input->post('name');
+		$total = $this->input->post('total');
 		$alamat = $this->input->post('alamat');
 		$city = $this->input->post('kota');
 		$kode_pos = $this->input->post('kode_pos');
@@ -19,10 +20,11 @@ class Model_invoice extends CI_Model
 		$email = $this->input->post('email');
 		$status = $this->input->post('status');
 
-		$invoice = array (
+		$invoice = array(
 			'order_id' 			=> $order_id,
 			'id_user' 			=> $id_user,
 			'name' 				=> $name,
+			'total' 				=> $total,
 			'alamat' 			=> $alamat,
 			'city' 				=> $city,
 			'kode_pos' 			=> $kode_pos,
@@ -33,14 +35,14 @@ class Model_invoice extends CI_Model
 			'email' 			=> $email,
 			'status' 			=> $status,
 			'transaction_time' 	=> date('Y-m-d H:i:s'),
-			'payment_limit' 	=> date('Y-m-d H:i:s', mktime( date('H'), date('i'), date('s'), date('m'), date('d') + 1, date('Y'))),
+			'payment_limit' 	=> date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d') + 1, date('Y'))),
 		);
 
 		$this->db->insert('transaction', $invoice);
 		$id_invoice = $this->db->insert_id();
 
 		foreach ($this->cart->contents() as $item) {
-			$data = array (
+			$data = array(
 				'id_invoice' 	=> $order_id,
 				'id_user' 		=> $id_user,
 				'id_brg' 		=> $item['id'],
@@ -50,17 +52,15 @@ class Model_invoice extends CI_Model
 			);
 
 			$this->db->insert('cart', $data);
-
 		}
 
 		return TRUE;
-
 	}
 
 	public function get()
 	{
 		$result = $this->db->get('transaction');
-		if($result->num_rows() > 0){
+		if ($result->num_rows() > 0) {
 			return $result->result();
 		} else {
 			return false;
@@ -70,7 +70,7 @@ class Model_invoice extends CI_Model
 	public function get_id_invoice($id_invoice)
 	{
 		$result = $this->db->where('order_id', $id_invoice)->limit(1)->get('transaction');
-		if ($result->num_rows() > 0){
+		if ($result->num_rows() > 0) {
 			return $result->row();
 		} else {
 			return false;
@@ -80,7 +80,37 @@ class Model_invoice extends CI_Model
 	public function get_id_pesanan($id_invoice)
 	{
 		$result = $this->db->where('id_invoice', $id_invoice)->get('cart');
-		if ($result->num_rows() > 0){
+		if ($result->num_rows() > 0) {
+			return $result->result();
+		} else {
+			return false;
+		}
+	}
+
+	public function get_all_invoices()
+	{
+		$result = $this->db->get('transaction');
+		if ($result->num_rows() > 0) {
+			return $result->result();
+		} else {
+			return false;
+		}
+	}
+
+	public function get_all_pesanan()
+	{
+		$result = $this->db->get('cart');
+		if ($result->num_rows() > 0) {
+			return $result->result();
+		} else {
+			return false;
+		}
+	}
+
+	public function get_all()
+	{
+		$result = $this->db->get('transaction');
+		if ($result->num_rows() > 0) {
 			return $result->result();
 		} else {
 			return false;

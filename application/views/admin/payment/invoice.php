@@ -1,7 +1,13 @@
     <div class="content">
-        <h2 class="intro-y text-lg font-medium mt-10">
-            Transaction List
+    <div class="content">
+    <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
+        <h2 class="text-lg font-medium mr-auto">
+            Transaction Details
         </h2>
+        <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
+            <a href="<?= site_url('admin/invoice/pdf/') ?>" class="btn btn-primary shadow-md mr-2">Print</a>
+        </div>
+    </div>
         <div class="grid grid-cols-12 gap-6 mt-5">
             <div class="intro-y col-span-12 flex flex-wrap xl:flex-nowrap items-center mt-2">
                 <div class="flex w-full sm:w-auto">

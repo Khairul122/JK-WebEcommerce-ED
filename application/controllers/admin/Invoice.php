@@ -39,11 +39,10 @@ class Invoice extends CI_Controller
 		redirect('admin/invoice');
 	}
 
-	public function pdf($id_invoice)
+	public function pdf()
 	{
 		$data['title'] = 'PDF Report';
-		$data['invoice'] = $this->model_invoice->get_id_invoice($id_invoice);
-		$data['pesanan'] = $this->model_invoice->get_id_pesanan($id_invoice);
+		$data['invoice'] = $this->model_invoice->get_all();
 		$this->load->library('pdf');
 		$this->pdf->setPaper('A4', 'potrait');
 		$this->pdf->filename = "Invoice Bill.pdf";
