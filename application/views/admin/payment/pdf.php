@@ -2,6 +2,7 @@
 
 $data_orders = $this->model_invoice->get_all();
 
+
 ?>
 
 <h2>
@@ -15,6 +16,8 @@ $data_orders = $this->model_invoice->get_all();
         <th>Total</th>
         <th>Alamat</th>
         <th>Mobile Phone</th>
+        <th>Tanggal</th>
+        <th>Owner</th>
     </tr>
 
     <?php
@@ -28,6 +31,8 @@ $data_orders = $this->model_invoice->get_all();
                 <td><?php echo $order->total; ?></td>
                 <td><?php echo $order->alamat; ?></td>
                 <td><?php echo $order->mobile_phone; ?></td>
+                <td><?php echo date('j F Y', strtotime($order->transaction_time)); ?></td>
+                <td>Zuryana Qincay</td>
             </tr>
         <?php
         }
