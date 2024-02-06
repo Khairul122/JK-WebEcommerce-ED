@@ -54,3 +54,16 @@ $end_date = isset($end_date) ? $end_date : '';
     }
     ?>
 </table>
+<br>
+<br>
+<div style="margin-top: 20px;">
+    <div style="float:right;">
+        Painan, <?php echo date('j F Y'); ?><br>
+        Pimpinan
+        <br>
+        <br>
+        <br>
+        <br>
+        (Pimpinan)
+    </div>
+</div>

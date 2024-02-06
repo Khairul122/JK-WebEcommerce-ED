@@ -25,7 +25,7 @@ $data_orders = $this->model_invoice->get_all();
     if ($data_orders) {
         $no = 1;
         foreach ($data_orders as $order) {
-            ?>
+    ?>
             <tr>
                 <td><?php echo $no++; ?></td>
                 <td><?php echo $order->name; ?></td>
@@ -46,3 +46,16 @@ $data_orders = $this->model_invoice->get_all();
     }
     ?>
 </table>
+<br>
+<br>
+<div style="margin-top: 20px;">
+    <div style="float:right;">
+        Painan, <?php echo date('j F Y'); ?><br>
+        Pimpinan
+        <br>
+        <br>
+        <br>
+        <br>
+        (Pimpinan)
+    </div>
+</div>
