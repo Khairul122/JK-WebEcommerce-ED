@@ -6,8 +6,9 @@ $data_orders = $this->model_invoice->get_all();
 ?>
 
 <h2>
-    <center>Laporan Data Order</center>
+    <center>Laporan Penjualan</center>
 </h2>
+
 <hr />
 <table border="1" width="100%" style="text-align:center;">
     <tr>

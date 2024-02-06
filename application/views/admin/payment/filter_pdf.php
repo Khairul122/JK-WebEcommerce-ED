@@ -5,8 +5,9 @@ $start_date = isset($start_date) ? $start_date : '';
 $end_date = isset($end_date) ? $end_date : '';
 ?>
 
+
 <h2>
-    <center>Laporan Data Order</center>
+    <center>Laporan Penjualan</center>
 </h2>
 
 <?php if ($start_date && $end_date) : ?>
