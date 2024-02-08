@@ -681,7 +681,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <div class="h-full flex items-center">
             <!-- BEGIN: Logo -->
             <a href="" class="-intro-x hidden md:flex">
-               
+
                 <span class="text-white text-lg ml-3"> NAFYDI SECONDBRAND </span>
             </a>
             <!-- END: Logo -->
@@ -775,7 +775,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <a href="<?= base_url('admin/product') ?>" class="side-menu">
                             <div class="side-menu__icon"> <i data-lucide="shopping-bag"></i> </div>
                             <div class="side-menu__title">
-                                Products
+                                Produk
                                 <div class="side-menu__sub-icon "></div>
                             </div>
                         </a>
