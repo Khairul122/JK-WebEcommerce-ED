@@ -1,10 +1,10 @@
    <div class="content">
        <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
            <h2 class="text-lg font-medium mr-auto">
-               Transaction Details
+               Detail Transaksi
            </h2>
            <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
-               <a href="<?= site_url('order') ?>" class="btn btn-danger shadow-md mr-2"> Orders History</a>
+               <a href="<?= site_url('order') ?>" class="btn btn-danger shadow-md mr-2">Riwayat Pemesanan</a>
            </div>
        </div>
        <!-- BEGIN: Transaction Details -->
@@ -12,12 +12,12 @@
            <div class="col-span-12 lg:col-span-4 2xl:col-span-3">
                <div class="box p-5 rounded-md">
                    <div class="flex items-center border-b border-slate-200/60 dark:border-darkmode-400 pb-5 mb-5">
-                       <div class="font-medium text-base truncate">Transaction Details</div>
+                       <div class="font-medium text-base truncate">Detail Transaksi</div>
                    </div>
                    <div class="flex items-center"> <i data-lucide="clipboard" class="w-4 h-4 text-slate-500 mr-2"></i> <b>Order ID:</b> <a href="" class="underline decoration-dotted ml-1">#<?= $invoice->order_id ?></a> </div>
-                   <div class="flex items-center mt-3"> <i data-lucide="clipboard" class="w-4 h-4 text-slate-500 mr-2"></i> <b>Payment Method:&nbsp;</b> Direct Bank Transfer </div>
-                   <div class="flex items-center mt-3"> <i data-lucide="calendar" class="w-4 h-4 text-slate-500 mr-2"></i> <b>Purchase Date:&nbsp;</b> <?= $invoice->transaction_time ?> </div>
-                   <div class="flex items-center mt-3"> <i data-lucide="clock" class="w-4 h-4 text-slate-500 mr-2"></i> <b>Transaction Status:&nbsp;</b>
+                   <div class="flex items-center mt-3"> <i data-lucide="clipboard" class="w-4 h-4 text-slate-500 mr-2"></i> <b>Metode Pembayaran:&nbsp;</b> Direct Bank Transfer </div>
+                   <div class="flex items-center mt-3"> <i data-lucide="calendar" class="w-4 h-4 text-slate-500 mr-2"></i> <b>Tanggal Pembayaran:&nbsp;</b> <?= $invoice->transaction_time ?> </div>
+                   <div class="flex items-center mt-3"> <i data-lucide="clock" class="w-4 h-4 text-slate-500 mr-2"></i> <b>Status Transaksi:&nbsp;</b>
                        <?php if ($invoice->status == "0") { ?>
                            <span class="bg-warning/20 text-warning rounded px-2 ml-1">Pending</span>
                        <?php } else if ($invoice->status == "1") { ?>
@@ -27,19 +27,19 @@
                </div>
                <div class="box p-5 rounded-md mt-5">
                    <div class="flex items-center border-b border-slate-200/60 dark:border-darkmode-400 pb-5 mb-5">
-                       <div class="font-medium text-base truncate">Buyer Details</div>
+                       <div class="font-medium text-base truncate">Detail Pembeli</div>
                    </div>
-                   <div class="flex items-center"> <i data-lucide="clipboard" class="w-4 h-4 text-slate-500 mr-2"></i> <b>Customer Name:</b> <a href="" class="underline decoration-dotted ml-1"><?= $invoice->name ?></a> </div>
-                   <div class="flex items-center mt-3"> <i data-lucide="calendar" class="w-4 h-4 text-slate-500 mr-2"></i> <b>Phone Number:</b>&nbsp; <?= $invoice->mobile_phone ?> </div>
+                   <div class="flex items-center"> <i data-lucide="clipboard" class="w-4 h-4 text-slate-500 mr-2"></i> <b>Nama Pembeli:</b> <a href="" class="underline decoration-dotted ml-1"><?= $invoice->name ?></a> </div>
+                   <div class="flex items-center mt-3"> <i data-lucide="calendar" class="w-4 h-4 text-slate-500 mr-2"></i> <b>No Hp:</b>&nbsp; <?= $invoice->mobile_phone ?> </div>
                </div>
                <div class="box p-5 rounded-md mt-5">
                    <div class="flex items-center border-b border-slate-200/60 dark:border-darkmode-400 pb-5 mb-5">
-                       <div class="font-medium text-base truncate">Shipping Information</div>
+                       <div class="font-medium text-base truncate">Status Pengiriman</div>
                        <a href="" class="flex items-center ml-auto text-primary"> <i data-lucide="map-pin" class="w-4 h-4 mr-2"></i> Tracking Info </a>
                    </div>
                    <div class="flex items-center"> <i data-lucide="clipboard" class="w-4 h-4 text-slate-500 mr-2"></i> <b>Courier:</b>&nbsp; <?= $invoice->ekspedisi ?> </div>
-                   <div class="flex items-center mt-3"> <i data-lucide="calendar" class="w-4 h-4 text-slate-500 mr-2"></i> <b>Tracking Order:</b>&nbsp; <?= $invoice->tracking_id ?> <i data-lucide="copy" class="w-4 h-4 text-slate-500 ml-2"></i> </div>
-                   <div class="flex items-center mt-3"> <i data-lucide="map-pin" class="w-4 h-4 text-slate-500 mr-2"></i> <b>Address:</b>&nbsp; <small><?= $invoice->alamat ?>, <?= $invoice->city ?>.</small> </div>
+                   <div class="flex items-center mt-3"> <i data-lucide="calendar" class="w-4 h-4 text-slate-500 mr-2"></i> <b>Pelacakan Pesanan:</b>&nbsp; <?= $invoice->tracking_id ?> <i data-lucide="copy" class="w-4 h-4 text-slate-500 ml-2"></i> </div>
+                   <div class="flex items-center mt-3"> <i data-lucide="map-pin" class="w-4 h-4 text-slate-500 mr-2"></i> <b>Alamat:</b>&nbsp; <small><?= $invoice->alamat ?>, <?= $invoice->city ?>.</small> </div>
                </div>
            </div>
            <div class="col-span-12 lg:col-span-7 2xl:col-span-8">
@@ -51,10 +51,10 @@
                        <table class="table table-striped">
                            <thead>
                                <tr>
-                                   <th class="whitespace-nowrap !py-5">Product Item</th>
-                                   <th class="whitespace-nowrap text-right">Unit Price</th>
-                                   <th class="whitespace-nowrap text-right">Qty</th>
-                                   <th class="whitespace-nowrap text-right">Sub Total</th>
+                                   <th class="whitespace-nowrap !py-5">Produk</th>
+                                   <th class="whitespace-nowrap text-right">Harga</th>
+                                   <th class="whitespace-nowrap text-right">Jumlah</th>
+                                   <th class="whitespace-nowrap text-right">Total</th>
                                </tr>
                            </thead>
                            <tbody>

@@ -30,12 +30,13 @@
                            <th class="whitespace-nowrap">
                                <input class="form-check-input" type="checkbox">
                            </th>
-                           <th class="whitespace-nowrap">IMAGES</th>
-                           <th class="whitespace-nowrap">PRODUCT NAME</th>
-                           <th class="whitespace-nowrap">STOCK</th>
-                           <th class="text-center whitespace-nowrap">PRICE</th>
+                           <th class="whitespace-nowrap">GAMBAR</th>
+                           <th class="whitespace-nowrap">NAMA PRODUK</th>
+                           <th class="whitespace-nowrap">STOK</th>
+                           <th class="text-center whitespace-nowrap">HARGA</th>
                            <th class="text-center whitespace-nowrap">STATUS</th>
-                           <th class="text-center whitespace-nowrap">ACTIONS</th>
+                           <th class="text-center whitespace-nowrap">AKSI</th>
+
                        </tr>
                    </thead>
                    <tbody>

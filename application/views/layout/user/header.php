@@ -674,7 +674,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <div class="h-full flex items-center">
             <!-- BEGIN: Logo -->
             <a href="" class="-intro-x hidden md:flex">
-                
+
                 <span class="text-white text-lg ml-3"> NAFYDI SECONDBRAND </span>
             </a>
             <!-- END: Logo -->
@@ -692,7 +692,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="dropdown-toggle notification notification--bullet cursor-pointer" role="button" aria-expanded="false" data-tw-toggle="dropdown"> <i data-lucide="shopping-cart" class="notification__icon dark:text-slate-500"></i> </div>
                 <div class="notification-content pt-2 dropdown-menu">
                     <div class="notification-content__box dropdown-content">
-                        <div class="notification-content__title"> <?php $keranjang = 'Shopping Cart : ' . $this->cart->total_items() . ' items ' ?>&nbsp; <?php echo $keranjang ?></div>
+                        <div class="notification-content__title"> <?php $keranjang = 'Keranjang : ' . $this->cart->total_items() . ' items ' ?>&nbsp; <?php echo $keranjang ?></div>
 
                         <?php foreach ($this->cart->contents() as $items) : ?>
                             <div class="cursor-pointer relative flex items-center ">
@@ -710,7 +710,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <?php endforeach; ?>
                         <br>
                         <hr>
-                        <button class="btn btn-sm btn-rounded-primary mt-4"><span class="text-uppercase"><a href="<?= site_url('dashboard/detail_cart') ?>">DETAIL CART</a></span></button>
+                        <button class="btn btn-sm btn-rounded-primary mt-4"><span class="text-uppercase"><a href="<?= site_url('dashboard/detail_cart') ?>">Lihat Keranjang</a></span></button>
                     </div>
                 </div>
             </div>
@@ -769,7 +769,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <a href="<?= base_url('order') ?>" class="side-menu">
                             <div class="side-menu__icon"> <i data-lucide="shopping-bag"></i> </div>
                             <div class="side-menu__title">
-                                Order History
+                                Riwayat Pemesanan
                                 <div class="side-menu__sub-icon "></div>
                             </div>
                         </a>
@@ -777,14 +777,14 @@ License: You must have a valid license purchased only from themeforest(the above
                     <li>
                         <a href="<?= base_url('bill') ?>" class="side-menu">
                             <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
-                            <div class="side-menu__title"> Billing History </div>
+                            <div class="side-menu__title"> Riwayat Pembayaran </div>
                         </a>
                     </li>
 
                     <li>
                         <a href="<?= base_url('pay') ?>" class="side-menu">
                             <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
-                            <div class="side-menu__title"> Invoice History </div>
+                            <div class="side-menu__title"> Riwayat Invoice </div>
                         </a>
                     </li>
                     <li class="side-nav__devider my-6"></li>

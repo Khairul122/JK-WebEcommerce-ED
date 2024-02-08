@@ -12,10 +12,10 @@
         <a href="#" class="logo">NAFYDI SECONDBRAND</a>
         <nav class="navbar">
             <a href="#home">Home</a>
-            <a href="<?= site_url('home') ?>" />Product</a>
-            <a href="#fearured">Fearured</a>
-            <a href="#blog">blog</a>
-            <a href="#news">news</a>
+            <a href="<?= site_url('home') ?>" />Produk</a>
+            <a href="#fearured">Fitur</a>
+            <a href="#blog">Blog</a>
+            <a href="#news">Berita</a>
         </nav>
         <div class="icons">
             <a href="<?= site_url('register') ?>"><i class="fa fa-user"></i></a>
@@ -232,7 +232,7 @@
                     <i class="fa fa-star"></i>
                 </div>
                 <p>
-                Ikon gaya dan kenyamanan. Desain rendah, detail klasik, cocok untuk gaya kasual dan sporty.
+                    Ikon gaya dan kenyamanan. Desain rendah, detail klasik, cocok untuk gaya kasual dan sporty.
                 </p>
                 <div class="price">Rp 300.000</div>
                 <a href="#" class="btn">add to cart</a>
@@ -254,7 +254,7 @@
                     <i class="fa fa-star"></i>
                 </div>
                 <p>
-                Ikon gaya dan kenyamanan. Desain rendah, detail klasik, cocok untuk gaya kasual dan sporty.
+                    Ikon gaya dan kenyamanan. Desain rendah, detail klasik, cocok untuk gaya kasual dan sporty.
                 </p>
                 <div class="price">Rp 300.000</div>
                 <a href="#" class="btn">add to cart</a>
@@ -276,7 +276,7 @@
                     <i class="fa fa-star"></i>
                 </div>
                 <p>
-                Ikon gaya dan kenyamanan. Desain rendah, detail klasik, cocok untuk gaya kasual dan sporty.
+                    Ikon gaya dan kenyamanan. Desain rendah, detail klasik, cocok untuk gaya kasual dan sporty.
                 </p>
                 <div class="price">Rp 300.000</div>
                 <a href="#" class="btn">add to cart</a>

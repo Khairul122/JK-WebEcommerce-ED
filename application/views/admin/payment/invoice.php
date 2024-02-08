@@ -2,7 +2,7 @@
     <div class="content">
         <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
             <h2 class="text-lg font-medium mr-auto">
-                Transaction Details
+                DETAIL TRANSAKSI
             </h2>
             <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
                 <a href="<?= site_url('admin/invoice/pdf/') ?>" class="btn btn-primary shadow-md mr-2">Cetak Semua Data</a>
@@ -36,12 +36,13 @@
                             <th class="whitespace-nowrap">
                                 <input class="form-check-input" type="checkbox">
                             </th>
-                            <th class="whitespace-nowrap">ORDER ID</th>
-                            <th class="whitespace-nowrap">CUSTOMER NAME</th>
-                            <th class="whitespace-nowrap">TRANSACTION TIME</th>
-                            <th class="whitespace-nowrap">PROOF OF PAYMENT</th>
+                            <th class="whitespace-nowrap">ID PESANAN</th>
+                            <th class="whitespace-nowrap">NAMA PELANGGAN</th>
+                            <th class="whitespace-nowrap">WAKTU TRANSAKSI</th>
+                            <th class="whitespace-nowrap">BUKTI PEMBAYARAN</th>
                             <th class="whitespace-nowrap">STATUS</th>
-                            <th class="text-center whitespace-nowrap">ACTIONS</th>
+                            <th class="text-center whitespace-nowrap">AKSI</th>
+
                         </tr>
                     </thead>
                     <tbody id="invoice-table-body">

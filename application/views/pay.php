@@ -26,13 +26,13 @@
                         <th class="whitespace-nowrap">
                             <input class="form-check-input" type="checkbox">
                         </th>
-                        <th class="whitespace-nowrap">ORDER ID</th>
-                        <th class="whitespace-nowrap">TRACKING NUMBER</th>
-                        <th class="whitespace-nowrap">PAYMENT METHOD</th>
-                        <th class="whitespace-nowrap">TRANSACTION TIME</th>
-                        <th class="whitespace-nowrap">TRANSACTION END</th>
+                        <th class="whitespace-nowrap">ID PESANAN</th>
+                        <th class="whitespace-nowrap">NOMOR PELACAKAN</th>
+                        <th class="whitespace-nowrap">METODE PEMBAYARAN</th>
+                        <th class="whitespace-nowrap">WAKTU TRANSAKSI</th>
+                        <th class="whitespace-nowrap">AKHIR TRANSAKSI</th>
                         <th class="whitespace-nowrap">STATUS</th>
-                        <th class="whitespace-nowrap">ACTION</th>
+                        <th class="whitespace-nowrap">AKSI</th>
                     </tr>
                 </thead>
                 <tbody>

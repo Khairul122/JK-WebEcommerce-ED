@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 30 Jan 2024 pada 05.49
+-- Waktu pembuatan: 08 Feb 2024 pada 12.34
 -- Versi server: 10.4.14-MariaDB
 -- Versi PHP: 7.4.10
 
@@ -38,19 +38,6 @@ CREATE TABLE `cart` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `cart`
---
-
-INSERT INTO `cart` (`id`, `id_user`, `id_invoice`, `id_brg`, `nama_brg`, `jumlah`, `harga`) VALUES
-(27, '11', 'INV-8091897', 1, 'Sepatu Converse', 1, 100000),
-(28, '11', 'INV-35361290', 2, 'Sepatu New Era', 1, 300000),
-(29, '11', 'INV-31685946', 1, 'Sepatu Converse', 1, 100000),
-(30, '11', 'INV-88941926', 8, 'New Balance 327', 1, 250000),
-(31, '11', 'INV-37681780', 8, 'New Balance 327', 1, 250000),
-(32, '11', 'INV-38779131', 8, 'New Balance 327', 1, 250000),
-(33, '11', 'INV-85519149', 8, 'New Balance 327', 1, 250000);
-
---
 -- Trigger `cart`
 --
 DELIMITER $$
@@ -82,8 +69,8 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id_brg`, `nama_brg`, `keterangan`, `kategori`, `harga`, `stok`, `gambar`) VALUES
-(8, 'New Balance 327', 'New Balance 327', 'Sneakers', 250000, 1, 'sepatu1.jpg'),
-(9, 'Louis Vuitton Trainer Sneaker', 'Louis Vuitton Trainer Sneaker', 'Sneakers', 400000, 0, 'sepatu2.jpg'),
+(8, 'New Balance 327', 'New Balance 327', 'Sneakers', 250000, 10, 'sepatu1.jpg'),
+(9, 'Louis Vuitton Trainer Sneaker', 'Louis Vuitton Trainer Sneaker', 'Sneakers', 400000, 10, 'sepatu2.jpg'),
 (10, 'Nike Air Jordan Travis Scoot Low', 'Nike Air Jordan Travis Scoot Low', 'Sneakers', 300000, 5, 'sepatu3.jpg'),
 (11, 'Nike Air Jordan 4 Retro', 'Nike Air Jordan 4 Retro', 'Sneakers', 320000, 5, 'sepatu4.jpg'),
 (12, 'Nike Air Jordan 4 Retro', 'Nike Air Jordan 4 Retro', 'Sneakers', 320000, 5, 'sepatu5.jpg');
@@ -113,13 +100,6 @@ CREATE TABLE `transaction` (
   `gambar` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data untuk tabel `transaction`
---
-
-INSERT INTO `transaction` (`order_id`, `id_user`, `name`, `email`, `total`, `alamat`, `mobile_phone`, `city`, `kode_pos`, `payment_method`, `ekspedisi`, `tracking_id`, `transaction_time`, `payment_limit`, `status`, `gambar`) VALUES
-('INV-85519149', '11', 'budi', 'budi@gmail.com', '250.000', 'Padang', '082165443677', 'Buru Selatan', '25521', 'Direct Bank Transfer', 'J&T Express', '502515432982', '2024-01-30 11:39:48', '2024-01-31 11:39:48', '1', 'LG16b_(1)1.jpg');
-
 -- --------------------------------------------------------
 
 --
@@ -140,8 +120,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `nama_user`, `email`, `password`, `level`, `avatar`) VALUES
-(6, 'Admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '1', 'user.png'),
-(11, 'budi', 'budi@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '2', 'user.png');
+(6, 'Admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '1', 'user.png');
 
 --
 -- Indexes for dumped tables
@@ -179,7 +158,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT untuk tabel `product`

@@ -24,9 +24,9 @@ $end_date = isset($end_date) ? $end_date : '';
         <th>Nama</th>
         <th>Total</th>
         <th>Alamat</th>
-        <th>Mobile Phone</th>
+        <th>No Hp</th>
         <th>Tanggal</th>
-        <th>Owner</th>
+        <th>Pemilik</th>
     </tr>
 
     <?php
@@ -64,6 +64,6 @@ $end_date = isset($end_date) ? $end_date : '';
         <br>
         <br>
         <br>
-        (Pimpinan)
+        (Zuryana Qincay)
     </div>
 </div>

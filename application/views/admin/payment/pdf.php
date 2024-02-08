@@ -16,9 +16,10 @@ $data_orders = $this->model_invoice->get_all();
         <th>Nama</th>
         <th>Total</th>
         <th>Alamat</th>
-        <th>Mobile Phone</th>
+        <th>No Hp</th>
         <th>Tanggal</th>
-        <th>Owner</th>
+        <th>Pemilik</th>
+    </tr>
     </tr>
 
     <?php
@@ -56,6 +57,6 @@ $data_orders = $this->model_invoice->get_all();
         <br>
         <br>
         <br>
-        (Pimpinan)
+        (Zuryana Qincay)
     </div>
 </div>
